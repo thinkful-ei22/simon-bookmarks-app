@@ -3,6 +3,7 @@
 <head>
   <title>Bookmarks App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
   <header>
     <h1>My Bookmarks</h1>
   </header>
+
   <section class="filter-add-buttons">
     <button type="button" class="add-button js-add-button">+ Add Bookmark</button>
     <select class="filter-by-star js-filter-by-star">
@@ -23,6 +25,7 @@
       <option value="5">5 Star</option>
     </select>
   </section>
+
   <section class="add-new-bookmark-input js-add-new-bookmark-input">
     <h2>Add Bookmark:</h2>
     <div>
@@ -44,8 +47,34 @@
       </form>
     </div>
   </section>
+
   <main>
     <ul>
+
+      <li>
+        <span>Title 1</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>
+          <div>
+            <span>URL https://example.net</span>
+            <button type="button" class="remove-button js-remove-button">remove</button>
+          </div>
+          <span>Long description here...</span>
+        </p>
+      </li>
+
+      <li>
+        <span>Title 2</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </li>
 
     </ul>
   </main>
