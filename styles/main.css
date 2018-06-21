@@ -7,7 +7,7 @@
 }
 
 .container {
-  max-width: 650px;
+  max-width: 40.625em;
   margin: 0 auto;
 }
 
@@ -25,9 +25,9 @@
 }
 
 .bookmark-list > li {
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
   border: 1px solid grey;
-  padding: 20px;
+  padding: 1.25em;
 }
 
 .fa {
@@ -39,16 +39,16 @@
 }
 
 .js-description-entry {
-  width: 530px;
-  height: 50px;
+  width: 33.125em;
+  height: 3.125em;
 }
 
 .js-title-entry {
-  width: 250px;
+  width: 15.625em;
 }
 
 .js-url-entry {
-  width: 350px;
+  width: 21.875em;
 }
 
 .remove-button {
@@ -56,6 +56,6 @@
 }
 
 .star-entry {
-  padding: 80px;
+  padding: 5em;
 
 }
