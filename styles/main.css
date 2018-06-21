@@ -1,3 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+.add-new-bookmark-input {
+  text-align: center;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
 .checked {
   color: gold;
+}
+
+.bookmark-header {
+  text-align: center;
+}
+
+.bookmark-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bookmark-list > li {
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  padding: 20px;
+}
+
+.fa {
+  float: right;
+}
+
+.filter-add-buttons {
+  text-align: center;
+}
+
+.js-description-entry {
+  width: 530px;
+  height: 50px;
+}
+
+.js-title-entry {
+  width: 250px;
+}
+
+.js-url-entry {
+  width: 350px;
+}
+
+.remove-button {
+  float: right;
+}
+
+.star-entry {
+  padding: 80px;
+
 }

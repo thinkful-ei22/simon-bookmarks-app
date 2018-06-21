@@ -11,73 +11,84 @@
   <title>Document</title>
 </head>
 <body>
-  <header>
-    <h1>My Bookmarks</h1>
-  </header>
+  <div class="container">
+    <header class="bookmark-header">
+      <h1>My Bookmarks</h1>
+    </header>
 
-  <section class="filter-add-buttons">
-    <button type="button" class="add-button js-add-button">+ Add Bookmark</button>
-    <select class="filter-by-star js-filter-by-star">
-      <option value="1">1 Star</option>
-      <option value="2">2 Star</option>
-      <option value="3">3 Star</option>
-      <option value="4">4 Star</option>
-      <option value="5">5 Star</option>
-    </select>
-  </section>
+    <section class="filter-add-buttons">
+      <button type="button" class="add-button js-add-button">+ Add Bookmark</button>
+      <select class="filter-by-star js-filter-by-star">
+        <option value="1">1 Star</option>
+        <option value="2">2 Star</option>
+        <option value="3">3 Star</option>
+        <option value="4">4 Star</option>
+        <option value="5">5 Star</option>
+      </select>
+    </section>
 
-  <section class="add-new-bookmark-input js-add-new-bookmark-input">
-    <h2>Add Bookmark:</h2>
-    <div>
-      <form id="js-add-bookmark-form">
-        <input type="text" placeholder="title" class="js-title-entry">
-        <input type="text" placeholder="url i.e http://example.com" class="js-url-entry">
-        <p>
-          <input type="text" placeholder="Longer description here..." class="js-description-entry">
-          <select class="js-star-entry">
-              <option value="1">1 Star</option>
-              <option value="2">2 Star</option>
-              <option value="3">3 Star</option>
-              <option value="4">4 Star</option>
-              <option value="5">5 Star</option>
-            </select>
-        </p>
-        <button type="submit" class="submit-button js-submit-button">Add</button>
-        <button type="button" class="reset-button js-reset-button">Reset</button>
-      </form>
-    </div>
-  </section>
+    <section class="add-new-bookmark-input js-add-new-bookmark-input">
+      <h2>Add Bookmark:</h2>
+      <div>
+        <form id="js-add-bookmark-form">
+          <input type="text" placeholder="title" class="js-title-entry">
+          <input type="text" placeholder="url i.e http://example.com" class="js-url-entry">
+          <p>
+            <textarea name="text" placeholder="Longer description here..." class="js-description-entry"></textarea>
+            <select class="star-entry js-star-entry">
+                <option value="1">1 Star</option>
+                <option value="2">2 Star</option>
+                <option value="3">3 Star</option>
+                <option value="4">4 Star</option>
+                <option value="5">5 Star</option>
+              </select>
+          </p>
+          <button type="submit" class="submit-button js-submit-button">Add</button>
+          <button type="button" class="reset-button js-reset-button">Reset</button>
+        </form>
+      </div>
+    </section>
 
-  <main>
-    <ul>
+    <main>
+      <ul class="bookmark-list">
 
-      <li>
-        <span>Title 1</span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <p>
-          <div>
+        <li>
+          <span class="title-name">Title 1</span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
             <span>URL https://example.net</span>
             <button type="button" class="remove-button js-remove-button">remove</button>
-          </div>
-          <span>Long description here...</span>
-        </p>
-      </li>
+            <div>
+              <span>Long description here...</span>
+            </div>
+          </p>
+        </li>
 
-      <li>
-        <span>Title 2</span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-      </li>
+        <li>
+          <span class="title-name">Title 2</span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </li>
 
-    </ul>
-  </main>
+        <li>
+            <span class="title-name">Title 3</span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star checked"></span>
+          </li>
+
+      </ul>
+    </main>
+  </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="scripts/bookmark-app.js"></script>
