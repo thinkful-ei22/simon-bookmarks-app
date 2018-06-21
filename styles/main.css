@@ -6,6 +6,13 @@
   text-align: center;
 }
 
+.add-header {
+  text-align: left;
+  padding-left: 1.5625em;
+  font-size: .9375em;
+  font-weight: normal;
+}
+
 .container {
   max-width: 40.625em;
   margin: 0 auto;
@@ -38,16 +45,16 @@
   text-align: center;
 }
 
-.js-description-entry {
+.description-entry {
   width: 33.125em;
   height: 3.125em;
 }
 
-.js-title-entry {
+.title-entry {
   width: 15.625em;
 }
 
-.js-url-entry {
+.url-entry {
   width: 21.875em;
 }
 
