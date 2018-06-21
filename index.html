@@ -13,17 +13,35 @@
   <header>
     <h1>My Bookmarks</h1>
   </header>
-  <section class="add-filter-buttons">
-    <button class="add-button">+ Add Bookmark</button>
-    <select class="filter-by-star">
+  <section class="filter-add-buttons">
+    <button type="button" class="add-button js-add-button">+ Add Bookmark</button>
+    <select class="filter-by-star js-filter-by-star">
       <option value="1">1 Star</option>
       <option value="2">2 Star</option>
       <option value="3">3 Star</option>
       <option value="4">4 Star</option>
       <option value="5">5 Star</option>
     </select>
-    <section class="add-bookmark-form">
-    </section>
+  </section>
+  <section class="add-new-bookmark-input js-add-new-bookmark-input">
+    <h2>Add Bookmark:</h2>
+    <div>
+      <form id="js-add-bookmark-form">
+        <input type="text" placeholder="title" class="js-title-entry">
+        <input type="text" placeholder="url i.e http://example.com" class="js-url-entry">
+        <p>
+          <input type="text" placeholder="Longer description here..." class="js-description-entry">
+          <select class="js-star-entry">
+              <option value="1">1 Star</option>
+              <option value="2">2 Star</option>
+              <option value="3">3 Star</option>
+              <option value="4">4 Star</option>
+              <option value="5">5 Star</option>
+            </select>
+            <button type="submit" class="submit-button js-submit-button">Add</button>
+        </p>
+      </form>
+    </div>
   </section>
   <main>
     <ul>
