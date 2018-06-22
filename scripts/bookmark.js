@@ -1,5 +1,7 @@
 'use strict';
 
+/*global cuid*/
+
 const Bookmark = (function() {
 
   const create = function(title, url, description, stars) {
@@ -13,5 +15,5 @@ const Bookmark = (function() {
   return {
     create,
   };
-  
+
 }());

@@ -17,6 +17,10 @@
   margin: 0 auto;
 }
 
+.click-expand {
+  display: none;
+}
+
 .checked {
   color: gold;
 }

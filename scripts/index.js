@@ -1,23 +1,75 @@
 'use strict';
 
+/*global store, api*/
+
 const generateItemElement = function(bookmark) {
-  return `
-    <li class="js-bookmark-element" data-item-id="${bookmark.id}">
-      <span class="title-name">${bookmark.name}</span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <p>
-        <span>${bookmark.url}</span>
-        <button type="button" class="remove-button js-remove-button">remove</button>
-        <div>
-          <span>${bookmark.desc}</span>
-        </div>
-      </p>
-    </li>
-  `;
+  if (bookmark.rating === 1) {
+    return `
+      <li class="js-bookmark-element" data-item-id="${bookmark.id}">
+        <span class="title-name">${bookmark.title}</span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="click-expand"></p>
+      </li>`;
+  } else if (bookmark.rating === 2) {
+    return `
+      <li class="js-bookmark-element" data-item-id="${bookmark.id}">
+        <span class="title-name">${bookmark.title}</span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="click-expand"></p>
+      </li>`;
+  } else if (bookmark.rating === 3) {
+    return `
+      <li class="js-bookmark-element" data-item-id="${bookmark.id}">
+        <span class="title-name">${bookmark.title}</span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="click-expand"></p>
+      </li>`;
+  } else if (bookmark.rating === 4) {
+    return `
+      <li class="js-bookmark-element" data-item-id="${bookmark.id}">
+        <span class="title-name">${bookmark.title}</span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="click-expand"></p>
+      </li>`;
+  } else if (bookmark.rating === 5) {
+    return `
+      <li class="js-bookmark-element" data-item-id="${bookmark.id}">
+        <span class="title-name">${bookmark.title}</span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="click-expand"></p>
+      </li>`;
+  }
+};
+
+const generateClickElement = function(event) {
+  const bookmarkId = getBookmarkIdFromElement(event.currentTarget);
+  const targetBookmark = store.findBookmark(bookmarkId);
+  $(this).find('.click-expand').html(`
+    <a href="${targetBookmark.url}" target="_blank">${targetBookmark.url}</a>
+    <button type="button" class="remove-button js-remove-button">remove</button>
+    <div>
+      <span>${targetBookmark.desc}</span>
+    </div>`).toggle();
 };
 
 const generateBookmarkListString = function(bookmarkList) {
@@ -44,16 +96,16 @@ const formIsValid = function(obj) {
 const handleNewBookmarkSubmit = function(event) {
   event.preventDefault();
   const {title, url, description, rating} = event.target.elements;
-  const bookmark = {
+  const bookmarkPush = {
     title: title.value,
     url: url.value,
     desc: description.value,
-    rating: parseInt(rating.value)
+    rating: parseInt(rating.value),
   };
-  if (formIsValid(bookmark)) {
-    api.createBookmark(bookmark, function(res) {
+  if (formIsValid(bookmarkPush)) {
+    api.createBookmark(bookmarkPush, function(res) {
       console.log(res);
-      store.addBookmark(bookmark);
+      store.addBookmark(bookmarkPush);
       render();
       $('#js-add-bookmark-form').trigger('reset');
     });
@@ -68,7 +120,7 @@ const getBookmarkIdFromElement = function(bookmark) {
 
 const handleDeleteButtonClick = function(event) {
   const bookmarkId = getBookmarkIdFromElement(event.currentTarget);
-  api.deleteBookmark(bookmarkId, function(response) {
+  api.deleteBookmark(bookmarkId, function() {
     store.deleteBookmark(bookmarkId);
     render();
   });
@@ -79,6 +131,8 @@ $(document).ready(function(){
     bookmarks.forEach((bookmark) => store.addBookmark(bookmark));
     render();
   });
+  $('body').on('click', '.js-bookmark-element', generateClickElement);
   $('#js-add-bookmark-form').on('submit', handleNewBookmarkSubmit);
   $('.js-bookmark-list').on('click', '.js-remove-button', handleDeleteButtonClick);
+  
 });
