@@ -54,8 +54,9 @@
 
 .description-entry {
   width: 33.125em;
-  height: 3.125em;
-  display: inline-block
+  height: 1.875em;
+  display: inline-block;
+  word-break: break-word;
 }
 
 .fa {
