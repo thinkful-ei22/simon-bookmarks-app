@@ -122,6 +122,17 @@ const handleNewBookmarkSubmit = function(event) {
   }
 };
 
+//do the thing here
+const handleFilterByStars = function() {
+  const value = parseInt($('.filter-star-button option:selected').text().split(' ').splice(0, 1).join(''));
+  store.bookmarks.forEach(bookmark => {
+    if (bookmark.rating < value) {
+      console.log('wow');
+    }
+  });
+};
+
+
 const getBookmarkIdFromElement = function(bookmark) {
   return $(bookmark).closest('.js-bookmark-element').data('item-id');
 };
@@ -142,5 +153,5 @@ $(document).ready(function(){
   $('body').on('click', '.js-bookmark-element', generateClickElement);
   $('#js-add-bookmark-form').on('submit', handleNewBookmarkSubmit);
   $('.js-bookmark-list').on('click', '.js-remove-button', handleDeleteButtonClick);
-  
+  $('.filter-star-button').on('change', handleFilterByStars);
 });
