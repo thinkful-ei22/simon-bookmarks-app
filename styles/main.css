@@ -1,98 +1,181 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+@media only screen and (min-width: 750px) {
+  * {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .add-new-bookmark-input {
+    text-align: center;
+    background-color: gainsboro;
+    padding: .625em;
+    color: gray;
+  }
+
+  .add-bookmark-form input:invalid{
+    border: .125px solid red;
+  }
+
+  .add-header {
+    text-align: left;
+    padding-left: 1.25em;
+    font-size: .9375em;
+  }
+
+  .bookmark-header {
+    padding: .625em;
+    text-align: center;
+    padding-top: 1.25em;
+    color: dimgray;
+    font-weight: bold;
+  }
+
+  .bookmark-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .bookmark-list > li {
+    margin-bottom: 1.25em;
+    border: .3125em solid gainsboro;
+    padding: 1.25em;
+  }
+
+  .container {
+    max-width: 40.625em;
+    margin: 0 auto;
+  }
+
+  .click-expand {
+    display: none;
+  }
+
+  .checked {
+    color: gold;
+  }
+
+  .description-entry {
+    width: 33.125em;
+    height: 1.875em;
+    display: inline-block;
+  }
+
+  .fa {
+    float: right;
+  }
+
+  .filter-star-button {
+    text-align: center;
+    padding-bottom: .9375em;
+  }
+
+  .filter-star-button + .add-new-bookmark-input {
+    margin-top: .9375em;
+  }
+
+  .remove-button {
+    float: right;
+  }
+
+  .star-entry {
+    padding: 5em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .submit-button{
+    margin-bottom: .625em;
+  }
+
+  .title-entry {
+    width: 15.625em;
+  }
+
+  .url-entry {
+    width: 21.875em;
+  }
 }
 
-.add-new-bookmark-input {
-  text-align: center;
-  background-color: gainsboro;
-  padding: .625em;
-  color: gray;
-}
+@media only screen and (max-width: 749px) {
+  * {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
 
-.add-bookmark-form input:invalid{
-  border: .125px solid red;
-}
+  .add-new-bookmark-input {
+    text-align: center;
+    background-color: gainsboro;
+    color: gray;
+    padding: .625em;
+  }
 
-.add-header {
-  text-align: left;
-  padding-left: 1.25em;
-  font-size: .9375em;
-}
+  .add-bookmark-form input:invalid{
+    border: .125px solid red;
+  }
 
-.bookmark-header {
-  padding: .625em;
-  text-align: center;
-  padding-top: 1.25em;
-  color: dimgray;
-  font-weight: bold;
-}
+  .add-header {
+    text-align: left;
+    padding-left: 1.25em;
+    font-size: .9375em;
+  }
 
-.bookmark-list {
-  list-style: none;
-  padding-left: 0;
-}
+  .bookmark-header {
+    text-align: center;
+    color: dimgray;
+    font-weight: bold;
+  }
 
-.bookmark-list > li {
-  margin-bottom: 1.25em;
-  border: .3125em solid gainsboro;
-  padding: 1.25em;
-}
+  .bookmark-list {
+    list-style: none;
+    padding-left: 0;
+  }
 
-.container {
-  max-width: 40.625em;
-  margin: 0 auto;
-}
+  .bookmark-list > li {
+    margin-bottom: 1.25em;
+    border: .3125em solid gainsboro;
+    padding: 1.25em;
+  }
 
-.click-expand {
-  display: none;
-}
+  .container {
+    max-width: 20em;
+    margin: 0 auto;
+  }
 
-.checked {
-  color: gold;
-}
+  .click-expand {
+    display: none;
+  }
 
-.description-entry {
-  width: 33.125em;
-  height: 1.875em;
-  display: inline-block;
-  word-break: break-word;
-}
+  .checked {
+    color: gold;
+  }
 
-.fa {
-  float: right;
-}
+  .description-entry {
+    width: 14em;
+    height: 1.875em;
+  }
 
-.filter-star-button {
-  text-align: center;
-  padding-bottom: .9375em;
-}
+  .fa {
+    float: right;
+  }
 
-.filter-star-button + .add-new-bookmark-input {
-  margin-top: .9375em;
-}
+  .filter-star-button {
+    text-align: center;
+  }
 
-.remove-button {
-  float: right;
-}
+  .remove-button {
+    float: right;
+  }
 
-.star-entry {
-  padding: 5em;
-  display: inline-block;
-  vertical-align: middle;
-}
+  .submit-button{
+    margin-bottom: .625em;
+  }
 
-.submit-button{
-  margin-bottom: .625em;
-}
+  .title-entry {
+    width: 7em;
+  }
 
-.title-entry {
-  width: 15.625em;
+  .url-entry {
+    width: 11em;
+  }
 }
-
-.url-entry {
-  width: 21.875em;
-}
-
 
 
