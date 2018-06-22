@@ -10,7 +10,7 @@
   color: gray;
 }
 
-#js-add-bookmark-form input:invalid{
+.add-bookmark-form input:invalid{
   border: .125px solid red;
 }
 
@@ -63,7 +63,7 @@
 
 .filter-star-button {
   text-align: center;
-  padding-bottom: .625em;
+  padding-bottom: .9375em;
 }
 
 .filter-star-button + .add-new-bookmark-input {
