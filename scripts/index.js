@@ -83,13 +83,21 @@ const render = function() {
   $('.js-bookmark-list').html(bookmarkListString);
 };
 
+// const formIsValid = function(obj) {
+//   let isValid = true;
+//   Object.keys(obj).forEach(key => {
+//     if (!obj[key]) {
+//       isValid = false;
+//     }
+//   });
+//   return isValid;
+// };
+
 const formIsValid = function(obj) {
   let isValid = true;
-  Object.keys(obj).forEach(key => {
-    if (!obj[key]) {
-      isValid = false;
-    }
-  });
+  if (!obj.title || !obj.url) {
+    isValid = false;
+  }
   return isValid;
 };
 
@@ -110,7 +118,7 @@ const handleNewBookmarkSubmit = function(event) {
       $('#js-add-bookmark-form').trigger('reset');
     });
   } else {
-    console.log('Not Valid');
+    alert('Title and URL required');
   }
 };
 
