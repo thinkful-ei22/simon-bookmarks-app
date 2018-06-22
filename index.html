@@ -11,12 +11,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container js-container">
     <header class="bookmark-header">
       <h1>My Bookmarks</h1>
     </header>
 
-    <section class="filter-star-button">
+    <section class="filter-star-button js-filter-star-button">
       <span>Filter by stars:</span>
       <select class="filter-by-star js-filter-by-star">
         <option value="1">1 Star</option>
@@ -32,7 +32,7 @@
       <div>
         <form id="js-add-bookmark-form">
           <input name="title" type="text" placeholder="title" class="title-entry js-title-entry">
-          <input name="url" type="text" placeholder="url i.e http://example.com" class="url-entry js-url-entry">
+          <input name="url" type="url" placeholder="url i.e http://example.com" class="url-entry js-url-entry">
           <p>
             <textarea name="description" placeholder="Longer description here..." class="description-entry js-description-entry"></textarea>
             <select name="rating" class="star-entry js-star-entry">
