@@ -55,6 +55,7 @@
 .description-entry {
   width: 33.125em;
   height: 3.125em;
+  display: inline-block
 }
 
 .fa {
@@ -76,6 +77,8 @@
 
 .star-entry {
   padding: 5em;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .submit-button{
