@@ -9,10 +9,10 @@ const bookmarkTools = (function() {
       return `
         <li class="js-bookmark-element" data-item-id="${bookmark.id}">
           <span class="title-name">${bookmark.title}</span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
           <span class="fa fa-star checked"></span>
           <p class="click-expand"></p>
         </li>`;
@@ -20,9 +20,9 @@ const bookmarkTools = (function() {
       return `
         <li class="js-bookmark-element" data-item-id="${bookmark.id}">
           <span class="title-name">${bookmark.title}</span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <p class="click-expand"></p>
@@ -31,8 +31,8 @@ const bookmarkTools = (function() {
       return `
         <li class="js-bookmark-element" data-item-id="${bookmark.id}">
           <span class="title-name">${bookmark.title}</span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
@@ -42,7 +42,7 @@ const bookmarkTools = (function() {
       return `
         <li class="js-bookmark-element" data-item-id="${bookmark.id}">
           <span class="title-name">${bookmark.title}</span>
-          <span class="fa fa-star"></span>
+          <span class="fa fa-star" style="color:gainsboro;"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>

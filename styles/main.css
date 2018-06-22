@@ -1,15 +1,42 @@
 * {
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
 .add-new-bookmark-input {
   text-align: center;
+  background-color: gainsboro;
+  padding: .625em;
+  color: gray;
+}
+
+#js-add-bookmark-form input:invalid{
+  border: .125px solid red;
 }
 
 .add-header {
   text-align: left;
-  padding-left: 1.5625em;
+  padding-left: 1.25em;
   font-size: .9375em;
+}
+
+.bookmark-header {
+  padding: .625em;
+  text-align: center;
+  padding-top: 1.25em;
+  color: dimgray;
+  font-weight: bold;
+}
+
+.bookmark-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bookmark-list > li {
+  margin-bottom: 1.25em;
+  border: .3125em solid gainsboro;
+  padding: 1.25em;
 }
 
 .container {
@@ -25,19 +52,9 @@
   color: gold;
 }
 
-.bookmark-header {
-  text-align: center;
-}
-
-.js-bookmark-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.js-bookmark-list > li {
-  margin-bottom: 1.25em;
-  border: 1px solid grey;
-  padding: 1.25em;
+.description-entry {
+  width: 33.125em;
+  height: 3.125em;
 }
 
 .fa {
@@ -46,11 +63,23 @@
 
 .filter-star-button {
   text-align: center;
+  padding-bottom: .625em;
 }
 
-.description-entry {
-  width: 33.125em;
-  height: 3.125em;
+.filter-star-button + .add-new-bookmark-input {
+  margin-top: .9375em;
+}
+
+.remove-button {
+  float: right;
+}
+
+.star-entry {
+  padding: 5em;
+}
+
+.submit-button{
+  margin-bottom: .625em;
 }
 
 .title-entry {
@@ -61,11 +90,5 @@
   width: 21.875em;
 }
 
-.remove-button {
-  float: right;
-}
 
-.star-entry {
-  padding: 5em;
 
-}

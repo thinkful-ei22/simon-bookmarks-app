@@ -4,6 +4,7 @@
   <title>Bookmarks App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,11 @@
 </head>
 <body>
   <div class="container js-container">
-    <header class="bookmark-header">
+    <header role='banner' class="bookmark-header">
       <h1>My Bookmarks</h1>
     </header>
 
-    <section class="filter-star-button js-filter-star-button">
+    <section role="region" class="filter-star-button js-filter-star-button">
       <span>Filter by stars:</span>
       <select class="filter-by-star js-filter-by-star">
         <option value="1">1 Star</option>
@@ -27,12 +28,12 @@
       </select>
     </section>
 
-    <section class="add-new-bookmark-input js-add-new-bookmark-input">
+    <section role="region" class="add-new-bookmark-input js-add-new-bookmark-input">
       <h2 class="add-header">Add Bookmark:</h2>
       <div>
         <form id="js-add-bookmark-form">
-          <input name="title" type="text" placeholder="title" class="title-entry js-title-entry">
-          <input name="url" type="url" placeholder="url i.e http://example.com" class="url-entry js-url-entry">
+          <input name="title" type="text" placeholder="title..." class="title-entry js-title-entry">
+          <input name="url" type="url" placeholder="url: http://example.com..." class="url-entry js-url-entry">
           <p>
             <textarea name="description" placeholder="Longer description here..." class="description-entry js-description-entry"></textarea>
             <select name="rating" class="star-entry js-star-entry">
@@ -48,8 +49,8 @@
       </div>
     </section>
 
-    <main>
-      <ul class="js-bookmark-list">
+    <main role="main">
+      <ul class="bookmark-list js-bookmark-list">
         
       </ul>
     </main>
